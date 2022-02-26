@@ -1,0 +1,17 @@
+{
+  "index.html": {
+    "file": "assets/index.ed1ae994.js",
+    "src": "index.html",
+    "isEntry": true,
+    "imports": ["_vendor.b596d887.js"],
+    "css": ["assets/index.c7b94daa.css"],
+    "assets": [
+      "assets/allSmokeys.3e6d104b.png",
+      "assets/footPrint.20697a08.svg",
+      "assets/darkFootPrint.166f2e11.svg"
+    ]
+  },
+  "_vendor.b596d887.js": {
+    "file": "assets/vendor.b596d887.js"
+  }
+}
