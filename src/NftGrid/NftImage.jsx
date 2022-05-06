@@ -4,6 +4,7 @@ import smokeyCatData from "../Assets/smokeyCatData.json"
 import {titleCase} from "../helpers/helpers.js"
 import { mintSmokey } from "../util/interact";
 
+
 const NFTImage = ({ tokenId, walletAddress, mintedURIs }) => {
   const toast = useToast()
   const toastIdRef = useRef()
@@ -12,7 +13,7 @@ const NFTImage = ({ tokenId, walletAddress, mintedURIs }) => {
   // Data Information
   const contentId = 'QmfVkTDjQDY9taFYu29WCb9cu7hRRfUJDckEbZWpBEosUy';
   const metadataURI = `${contentId}/${tokenId}.json`
-  const imgSrc = `https://garrettroell.com/smokeycats/${tokenId}.png`;
+  const imgUrl = new URL(`../Assets/images/${tokenId}.png`, import.meta.url).href
   
   // keep track of if the nft is minted
   const [isMinted, setIsMinted] = useState(false);
@@ -77,11 +78,11 @@ const NFTImage = ({ tokenId, walletAddress, mintedURIs }) => {
   return ( 
     <>
       <Box p="5" maxW="320px" h="100%" mx="auto" borderWidth="1px" borderRadius='6px'>
-        <a href={imgSrc}>
+        <a href={imgUrl}>
           <Box borderWidth={isMinted ? "0.7" : "1"} borderColor="#C53030">
             <Image 
               borderRadius="md" 
-              src={imgSrc} 
+              src={imgUrl} 
               fallback={<AspectRatio maxW='560px' ratio={1}><Box bg="lightgray" borderRadius="md"></Box></AspectRatio>}
             />
           </Box>

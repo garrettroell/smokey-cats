@@ -2,9 +2,6 @@ import { Button, Flex, Heading, Menu, MenuButton, MenuItem, MenuList, Text, useC
 import { Link } from "react-router-dom";
 import { SunIcon, MoonIcon, HamburgerIcon } from '@chakra-ui/icons'
 
-
-
-
 const NavBar = () => {
 
   const { colorMode, toggleColorMode } = useColorMode()
