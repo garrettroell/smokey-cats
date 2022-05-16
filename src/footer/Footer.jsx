@@ -18,9 +18,10 @@ const Footer = () => {
             <Spacer w="8px"/>
             <Text>Add Polygon Network</Text>
           </Button>
+
           <Link href='https://github.com/garrettroell/smokey_cats' isExternal>
-            <Button h="28px" w="28px" p="0px" variant="outline" borderColor={useColorModeValue("black", "white")}>
-              <FiGithub color={useColorModeValue("black", "white")}/>
+            <Button h="28px" w="28px" p="0px" colorScheme='teal' >
+              <FiGithub />
             </Button>
           </Link>
         </HStack>
