@@ -1,5 +1,6 @@
-import { Box, Button, Flex, Heading, Spacer, Text, Link, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Spacer, Text, Link, useColorModeValue, HStack } from "@chakra-ui/react";
 import { addPolygonNetwork } from "../util/interact";
+import { FiGithub } from 'react-icons/fi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -11,11 +12,18 @@ const Footer = () => {
             Garrett Roell {currentYear}
           </Heading>
         </Link>
-        <Button size='sm' py="1px" px="8px" h="28px" colorScheme='teal' fontSize="12px" onClick={() => {addPolygonNetwork()}}>
-          <Text>🦊</Text>
-          <Spacer w="8px"/>
-          <Text>Add Polygon Network</Text>
-        </Button>
+        <HStack>
+          <Button size='sm' py="1px" px="8px" h="28px" colorScheme='teal' fontSize="12px" onClick={() => {addPolygonNetwork()}}>
+            <Text>🦊</Text>
+            <Spacer w="8px"/>
+            <Text>Add Polygon Network</Text>
+          </Button>
+          <Link href='https://github.com/garrettroell/smokey_cats' isExternal>
+            <Button h="28px" w="28px" p="0px" variant="outline" borderColor={useColorModeValue("black", "white")}>
+              <FiGithub color={useColorModeValue("black", "white")}/>
+            </Button>
+          </Link>
+        </HStack>
       </Flex>
     </Box>
    );
